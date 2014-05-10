@@ -16,6 +16,13 @@
                 padding-top: 50px;
                 padding-bottom: 20px;
             }
+            textarea.expanding {
+              -webkit-box-sizing: border-box;
+              -moz-box-sizing: border-box;
+              box-sizing: border-box;
+              width: 70%;
+              margin:0 auto;    
+            }
         </style>
         <link rel="stylesheet" href="css/bootstrap-theme.min.css">
         <link rel="stylesheet" href="css/main.css">
@@ -93,7 +100,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-12">      
-                        <textarea name="message" rows="5"></textarea>
+                        <textarea  class='expanding' name="message" rows="5"></textarea>
                     </div>
                 </div>
                 <div class="row">
@@ -115,7 +122,7 @@
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
 
         <script src="js/vendor/bootstrap.min.js"></script>
-
+        <script type='text/javascript' src='js/expanding.js'></script>
         <script src="js/main.js"></script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
