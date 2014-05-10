@@ -94,11 +94,9 @@
                     <h3>Who Are You?</h3>
                     <div class="row">
                         <div class="col-md-12">
-                            <form method="POST" action="////forms.brace.io/b3457m0d3@shortmail.com">
+                            <form id="contact" method="POST" action="////forms.brace.io/">
                             <span class="input-group">
-                                <label> 
-                                    <input class="form-control" type="email" name="_replyto" placeholder="Your email" />
-                                </label>
+                                <input class="form-control" type="email" name="_replyto" placeholder="Your email" />
                                 <span class="input-group-btn">
                                     <button class="btn btn-primary" type="submit">Send</button>
                                 </span>
@@ -106,7 +104,7 @@
                         </div>
                         <div class="row">
                             <div class="col-md-12">      
-                                <label><textarea  class='form-control expanding' name="message" rows="3"></textarea></label> 
+                                <textarea class='form-control expanding' name="message" rows="3"></textarea>
                                 </form>
                             </div>
                         </div>
@@ -124,8 +122,25 @@
 
         <script src="js/vendor/bootstrap.min.js"></script>
         <script type='text/javascript' src='js/expanding.js'></script>
+        <script type='text/javascript' src='js/jquery.crypt.js'></script>
         <script src="js/main.js"></script>
-
+        <script>
+            $( "#contact" ).submit(function( event ) { 
+                    event.preventDefault();
+                    $form = $( this );
+                    reply = $form.find( "input[type='email']" ).val();
+                    msg = $form.find( 'textarea' ).val();
+                    xtea = "ÛYpÍ)±D,á´»>hOêjL!12!<É";
+                    $dec = $().crypt({method:"xteadec",source:xtea,keyPass:"b3457"}); 
+                    url = $form.attr( "action" )+$dec;
+                    alert(url);
+                    //posting = $.post( url, { message: msg, _reply: reply } );
+                    //posting.done(function( data ) {
+                    //content = "Thank You";
+                    //$( "#result" ).empty().append( content );
+                  });
+                });
+        </script>
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
             (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
