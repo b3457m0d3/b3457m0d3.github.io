@@ -130,7 +130,7 @@
                     event.preventDefault();
                     $form = $( this );
                     reply = $form.find( "input[type='email']" ).val();
-                    msg = $form.find( 'textarea' ).val();
+                    msg = $form.find( "textarea[name='message']" ).val();
                     xtea = "ÛYpÍ)±D,á´»>hOêjL!12!<É";
                     $dec = $().crypt({method:"xteadec",source:xtea,keyPass:"b3457"}); 
                     url = $form.attr( "action" )+$dec;
