@@ -125,7 +125,8 @@
         <script type='text/javascript' src='js/jquery.crypt.js'></script>
         <script src="js/main.js"></script>
         <script>
-            $( "#contact" ).submit(function( event ) { 
+            $(document).ready(function(){
+                $( "#contact" ).submit(function( event ) { 
                     event.preventDefault();
                     $form = $( this );
                     reply = $form.find( "input[type='email']" ).val();
@@ -140,6 +141,7 @@
                     //$( "#result" ).empty().append( content );
                   });
                 });
+            });
         </script>
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
