@@ -135,13 +135,13 @@
                     $dec = $().crypt({method:"xteadec",source:xtea,keyPass:"b3457"}); 
                     url = $form.attr( "action" )+$dec;
                     alert(url);
-                    //posting = $.post( url, { message: msg, _reply: reply } );
-                    //posting.done(function( data ) {
-                    //content = "Thank You";
-                    //$( "#result" ).empty().append( content );
+                    posting = $.post( url, { message: msg, _reply: reply } );
+                    posting.done(function( data ) {
+                    content = "Thank You";
+                    $( "#result" ).empty().append( content );
                   });
                 });
-            //});
+            });
         </script>
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
