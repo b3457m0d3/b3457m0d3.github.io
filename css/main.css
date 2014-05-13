@@ -44,7 +44,14 @@ textarea.expanding {
 .roundabout-moveable-item img{height:100%;width:100%;}
 .roundabout-in-focus{cursor:auto;}
 
-
+#ticker li{
+	font-size: 28px;
+	color: #4E4E4E;
+	white-space: nowrap;
+	list-style: none;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
 
 
 
