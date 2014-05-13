@@ -16,7 +16,7 @@ textarea.expanding {
   width: 40%;
   margin:0 auto;    
 }
-.popover {margin-bottom:70px;}
+.popover {margin-bottom:70px !important;}
 
 .slabtexted .slabtext
         {
