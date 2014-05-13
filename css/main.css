@@ -47,6 +47,7 @@ textarea.expanding {
 #ticker li{
     float:right;
 	font-size: 18px;
+    padding:1px;
 	color: #fff;
 	white-space: nowrap;
 	list-style: none;
