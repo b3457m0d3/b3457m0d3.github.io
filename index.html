@@ -89,7 +89,22 @@
                     <h3 class="poiret-one">What do I Bring to the Table?</h3>
                     <span class="text-justify"> 
                     My Skills include 
-                        <ul id="roundabout">
+                        <div id="roundabout">
+                            <img src="img/html5.png" alt="" class="slide" />
+                            <img src="img/css3.png" alt="" class="slide" />
+                            <img src="img/jquery.png" alt="" class="slide" />
+                            <img src="img/jquery-ui".png alt="" class="slide" />
+                            <img src="img/jquery-mobile.png" alt="" class="slide" />
+                            <img src="img/php.png" alt="" class="slide" />
+                            <img src="img/ps.png" alt="" class="slide" />
+                            <img src="img/java.png" alt="" class="slide" />
+                            <img src="img/android.png" alt="" class="slide" />
+                            <img src="img/mysql.png" alt="" class="slide" />
+                            <img src="img/sqlite.png" alt="" class="slide" />
+                            <img src="img/wordpress.png" alt="" class="slide" />
+                            <img src="img/ajax.png" alt="" class="slide" />
+                            <img src="img/bootstrap.png" alt="" class="slide" />
+                            <img src="img/10years.png" alt="" class="slide" />
                             <li>HTML5</li>
                             <li>CSS3</li>
                             <li>Photoshop</li>
@@ -105,7 +120,7 @@
                             <li>Custom WordPress Themes</li>
                             <li>BootStrap 3</li>
                             <li>and 10+ years of experience in the field</li>
-                        </ul>
+                        </div>
                     </span>
                     <p><a class="btn btn-info" href="#">View details &raquo;</a></p>
                 </div>
@@ -164,7 +179,7 @@
         <script type="text/javascript" src="js/main.js"></script>
         <script type="text/javascript">
             $(document).ready(function(){
-                $("#roundabout").roundabout();
+                $("#roundabout").roundabout({childSelector:"img"});
                 $( "#contact" ).submit(function( event ) { 
                     event.preventDefault();
                     $form = $( this );
