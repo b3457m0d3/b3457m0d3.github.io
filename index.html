@@ -116,7 +116,11 @@
                     <p><a class="btn btn-info pull-right" href="#">Portfolio</a></p>
                 </div>
                 <div id="thirdCol" class="col-lg-4">
-                    <h3 class="poiret-one">Who Are You?</h3>
+                    <h3 class="poiret-one">Who Are You?
+                        <small>
+                            <span id="charCount"></span>
+                        </small>
+                    </h3>
                     <form id="contact" method="POST" action="////forms.brace.io/">
                         <div class="row">
                             <div class="col-md-12">
@@ -190,6 +194,15 @@
                     autoplay:true, 
                     autoplayDuration:2000, 
                     autoplayPauseOnHover:true
+                });
+                var text_max = 500;
+                $('#charCount').html(text_max + ' characters remaining');
+            
+                $('#textarea').keyup(function() {
+                    var text_length = $('#message').val().length;
+                    var text_remaining = text_max - text_length;
+            
+                    $('#charCount').html(text_remaining + ' characters remaining');
                 });
                 $html = "<span class='open-sans-c'>Please Answer The Following:<br/><ul class='list-unstyled'>"
                        +"<li>What kind of company?</li><li>Deadline?<li>"
