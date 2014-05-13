@@ -68,6 +68,20 @@
             the adventurous. Will you venture forth and thrill your eager cohorts with harrowing tales of your feats?  Or 
             will you toil in obscurity forever plaqued by the most ominous of quandries: "What If?"  
         </p>
+        <ul id="ticker">
+            <li>
+                A powerful, flexible and animated vertical news ticker plugin.
+            </li>
+            <li>
+                Provides hight flexibility thanks to numerous callbacks & methods.
+            </li>
+            <li>
+                Fully customizable to every kind of vertical scrolling need.
+            </li>
+            <li>
+                Light-weight and optimized JQuery plugin.
+            </li>
+        </ul>
         <p class="text-right"><a class="btn btn-primary btn-lg" role="button">Learn more &raquo;</a></p>
       </div>
       </div>
@@ -160,10 +174,17 @@
         <script type='text/javascript' src='js/expanding.js'></script>
         <script type='text/javascript' src='js/jquery.crypt.js'></script>
         <script type='text/javascript' src='js/jquery.roundabout.min.js'></script> 
+        <script type='text/javascript' src='js/jquery.newsTicker.min.js'></script>
         <script type='text/javascript' src='js/jquery.slabtext.min.js'></script>
         <script type="text/javascript" src="js/main.js"></script>
         <script type="text/javascript">
             $(document).ready(function(){
+                $('#ticker').newsTicker({
+                    row_height: 40,
+                    max_rows: 1,
+                    duration: 3000,
+                    pauseOnHover: 0
+                });
                 $(".slab").slabText();
                 $("#roundabout").roundabout({
                     childSelector:"img",
