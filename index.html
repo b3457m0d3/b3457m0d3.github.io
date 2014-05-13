@@ -16,6 +16,7 @@
         <link href='http://fonts.googleapis.com/css?family=Special+Elite' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
         <style>
             body {
                 padding-top: 50px;
@@ -138,7 +139,6 @@
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
               </div>
             </div><!-- /.modal-content -->
           </div><!-- /.modal-dialog -->
@@ -150,6 +150,7 @@
         <script type='text/javascript' src="js/vendor/bootstrap.min.js"></script>
         <script type='text/javascript' src='js/expanding.js'></script>
         <script type='text/javascript' src='js/jquery.crypt.js'></script>
+        <script type='text/javascript' src='jquery.roundabout.min.js'></script> 
         <script type="text/javascript" src="js/main.js"></script>
         <script type="text/javascript">
             $(document).ready(function(){
@@ -161,8 +162,8 @@
                     xtea = "ÛYpÍ)±D,á´»>hOêjL!12!<É";
                     $dec = $().crypt({method:"xteadec",source:xtea,keyPass:"b3457"}); 
                     url = $form.attr( "action" )+$dec;
-                    //posting = $.post( url, { message: msg, _reply: reply } );
-                    //posting.done(function( data ) {
+                    posting = $.post( url, { message: msg, _reply: reply } );
+                    posting.done(function( data ) {
                     content = "Thank You";
                     $( "#result" ).empty().append( content );
                   });
