@@ -15,9 +15,7 @@ textarea.expanding {
   margin:0 auto;    
 }
 
-#title {
-    position:relative;top:-10;left:10;
-}
+
 .slabtexted .slabtext
         {
         display:-moz-inline-box;
