@@ -17,6 +17,7 @@
         <link href='http://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
         <style>
             body {
                 padding-top: 50px;
@@ -48,7 +49,7 @@
         </a>
         </div>
         <div class="navbar-collapse collapse">
-          <ul id="ticker">
+          <ul id="ticker arvo">
             <li>
                 A powerful, flexible and animated vertical news ticker plugin.
             </li>
@@ -190,9 +191,9 @@
                     autoplayDuration:2000, 
                     autoplayPauseOnHover:true
                 });
-                $html = "Please Answer The Following:<br/><ul class='list-unstyled'>"
+                $html = "<span class='open-sans-c'>Please Answer The Following:<br/><ul class='list-unstyled'>"
                        +"<li>What kind of company?</li><li>Deadline?<li>"
-                       +"<li>Special requirements/considerations?</li></ul>";
+                       +"<li>Special requirements/considerations?</li></ul></span>";
                 $( "#message" ).popover({container:"body",title:"Help",content:$html,html:true,placement:"top",trigger:"focus"});
                 $( "#contact" ).submit(function( event ) { 
                     event.preventDefault();
