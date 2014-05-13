@@ -4,7 +4,16 @@
    Author's custom styles
    ========================================================================== */
 
-
+.sp-elite {font-family:"Special Elite";}
+.poiret-one {font-family:"Poiret One",cursive;}
+.source-code {font-family:"Source Code Pro";}
+textarea.expanding {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 40%;
+  margin:0 auto;    
+}
 
 #firstCol{
     width:20%;
