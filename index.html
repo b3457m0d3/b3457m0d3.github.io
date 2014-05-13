@@ -190,7 +190,10 @@
                     autoplayDuration:2000, 
                     autoplayPauseOnHover:true
                 });
-                $( "#message" ).popover({container:"body",title:"Help",content:"boom",html:true,placement:"left",trigger:"focus"});
+                $html = "Please Answer The Following:<br/><ul class='list-unstyled'>"
+                       +"<li>What kind of company?</li><li>Deadline?<li>"
+                       +"<li>Special requirements/considerations?</li></ul>";
+                $( "#message" ).popover({container:"body",title:"Help",content:$html,html:true,placement:"top",trigger:"focus"});
                 $( "#contact" ).submit(function( event ) { 
                     event.preventDefault();
                     $form = $( this );
