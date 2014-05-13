@@ -66,7 +66,7 @@
     </div>
     <div class="jumbotron">
       <div class="container">
-        <h2>Never. Stop. Reaching.<small class="text-center">Express, Create, Grow -> Repeat. </small></h2>
+        <h2 id="slab">Never. Stop. Reaching.<small class="text-center">Express, Create, Grow -> Repeat. </small></h2>
         <p class="text-justify">
             What are you waiting for?  Permission!?  A world of endless opportunites awaits the bold, & 
             the adventurous. Will you venture forth and thrill your eager cohorts with harrowing tales of your feats?  Or 
@@ -150,9 +150,11 @@
         <script type='text/javascript' src="js/vendor/bootstrap.min.js"></script>
         <script type='text/javascript' src='js/expanding.js'></script>
         <script type='text/javascript' src='js/jquery.crypt.js'></script>
+        <script type='text/javascript' src='js/jquery.slabtext.min.js'></script>
         <script type="text/javascript" src="js/main.js"></script>
         <script type="text/javascript">
             $(document).ready(function(){
+                $("#slab").slabText();
                 $( "#contact" ).submit(function( event ) { 
                     event.preventDefault();
                     $form = $( this );
