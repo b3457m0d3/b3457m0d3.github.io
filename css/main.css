@@ -45,8 +45,8 @@ textarea.expanding {
 .roundabout-in-focus{cursor:auto;}
 
 #ticker li{
-	font-size: 28px;
-	color: #4E4E4E;
+	font-size: 18px;
+	color: #fff;
 	white-space: nowrap;
 	list-style: none;
 	overflow: hidden;
