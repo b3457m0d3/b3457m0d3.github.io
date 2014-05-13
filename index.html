@@ -88,11 +88,24 @@
                 <div id="secondCol" class="col-lg-5">
                     <h3 class="poiret-one">What do I Bring to the Table?</h3>
                     <span class="text-justify"> 
-                    My Skills include HTML5 & CSS3, Photoshop, Java,
-                    JQuery, JQuery-UI, JQuery Mobile, Javascript, 
-                    Android Application Development,PHP, MySQL,
-                     SQLite, Custom WordPress Themes, BootStrap 3,
-                    and 10+ years of experience in the field
+                    My Skills include 
+                        <ul id="roundabout">
+                            <li>HTML5</li>
+                            <li>CSS3</li>, 
+                            <li>Photoshop</li>, 
+                            <li>Java</li>,
+                            <li>JQuery</li>, 
+                            <li>JQuery-UI</li>, 
+                            <li>JQuery Mobile</li>, 
+                            <li>Javascript</li>, 
+                            <li>Android Application Development</li>,
+                            <li>PHP</li>, 
+                            <li>MySQL</li>,
+                            <li>SQLite</li>, 
+                            <li>Custom WordPress Themes</li>, 
+                            <li>BootStrap 3</li>,
+                            <li>and 10+ years of experience in the field</li>
+                        </ul>
                     </span>
                     <p><a class="btn btn-info" href="#">View details &raquo;</a></p>
                 </div>
@@ -151,6 +164,7 @@
         <script type="text/javascript" src="js/main.js"></script>
         <script type="text/javascript">
             $(document).ready(function(){
+                $("#roundabout").roundabout();
                 $( "#contact" ).submit(function( event ) { 
                     event.preventDefault();
                     $form = $( this );
