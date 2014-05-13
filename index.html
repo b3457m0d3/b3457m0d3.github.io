@@ -77,7 +77,7 @@
             <div class="row">
                 <div id="firstCol" class="col-lg-3">
                     <h3 class="poiret-one">Who Am I?</h3>
-                    <p>
+                    <p class="slab">
                     I'm Jessie James Jackson Taylor.  
                     Freelance Creative & Internet Architect. 
                     I'm also an Artist, and a Writer.
@@ -161,9 +161,11 @@
         <script type='text/javascript' src='js/expanding.js'></script>
         <script type='text/javascript' src='js/jquery.crypt.js'></script>
         <script type='text/javascript' src='js/jquery.roundabout.min.js'></script> 
+        <script type='text/javascript' src='js/jquery.slabtext.min.js'></script>
         <script type="text/javascript" src="js/main.js"></script>
         <script type="text/javascript">
             $(document).ready(function(){
+                $(".slab").slabText();
                 $("#roundabout").roundabout({childSelector:"img"});
                 $( "#contact" ).submit(function( event ) { 
                     event.preventDefault();
