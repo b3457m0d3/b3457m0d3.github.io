@@ -16,7 +16,7 @@ textarea.expanding {
 }
 
 #title {
-    position:relative;top:0;left:0;
+    position:relative;top:-10;left:10;
 }
 .slabtexted .slabtext
         {
