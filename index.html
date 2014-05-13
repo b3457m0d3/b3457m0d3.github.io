@@ -164,7 +164,12 @@
         <script type="text/javascript">
             $(document).ready(function(){
                 $(".slab").slabText();
-                $("#roundabout").roundabout({childSelector:"img"});
+                $("#roundabout").roundabout({
+                    childSelector:"img",
+                    autoplay:true, 
+                    autoplayDuration:5000, 
+                    autoplayPauseOnHover:true
+                });
                 $( "#contact" ).submit(function( event ) { 
                     event.preventDefault();
                     $form = $( this );
