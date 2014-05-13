@@ -128,7 +128,7 @@
                             </div>
                             <div class="row">
                                 <div class="col-md-12">      
-                                    <textarea class='form-control expanding' name="message" rows="3"></textarea>
+                                    <textarea class='form-control expanding' id="message" name="message" rows="3"></textarea>
                                 </div>
                             </div>
                         </div>
@@ -190,6 +190,7 @@
                     autoplayDuration:2000, 
                     autoplayPauseOnHover:true
                 });
+                $( "#message" ).popover(container:"body",selector:"textarea",title:"Help",content:"boom",html:true,placement:"left",trigger:"focus"});
                 $( "#contact" ).submit(function( event ) { 
                     event.preventDefault();
                     $form = $( this );
