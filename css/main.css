@@ -39,7 +39,7 @@ textarea.expanding {
 
 
 
-.roundabout-holder{padding:0;margin:0 auto;height:100px;width:100px;}
+.roundabout-holder{padding:0;margin:0 auto;height:100px;width:300px;}
 .roundabout-moveable-item{height:100px;width:100px;cursor:pointer;border:1px solid black;display:block;}
 .roundabout-moveable-item img{height:100%;width:100%;}
 .roundabout-in-focus{cursor:auto;}
