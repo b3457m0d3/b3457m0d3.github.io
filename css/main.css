@@ -59,7 +59,7 @@ textarea.expanding {
 .roundabout-moveable-item{height:100px;width:100px;cursor:pointer;border:1px solid black;display:block;}
 .roundabout-moveable-item img{height:100%;width:100%;}
 .roundabout-in-focus{cursor:auto;}
-#ticker {margin-top:10px;}
+#ticker {margin-top:10px;margin-left:10px;}
 #ticker li{
     float:right;
 	font-size: 18px;
