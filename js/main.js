@@ -41,10 +41,11 @@ $(function() {
     
             $('#charCount').html('<h5><span class="open-sans-c">Chars Left:</span> <span class="badge pull-right">' + text_remaining + '</span></h5>');
         });
-        $html = "<h3 class='arvo'>Please Answer The Following:</h3><span class='open-sans-c'><ul class='list-unstyled'>"
+        $html = "<h3 class='arvo'>Please Include The Following:</h3><span class='source-code'><ul class='list-unstyled'>"
                +"<li>What kind of company?</li><li>Deadline?<li>"
-               +"<li>Special requirements/considerations?</li></ul></span>";
-        $( "#message" ).popover({container:"body",title:"Help",content:$html,html:true,placement:"left",trigger:"focus"});
+               +"<li>Special requirements/considerations?</li>"
+               +"<li></li></ul></span>";
+        $( "#message" ).popover({container:"body",title:"<i class='fa fa-question-circle fa-3x pull-right'></i>",content:$html,html:true,placement:"left",trigger:"focus"});
         
         
         var $_GET = getQueryParams(document.location.search);
