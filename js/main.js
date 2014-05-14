@@ -10,6 +10,9 @@ $(function() {
     }
     $(document).ready(function(){
         
+        $("#hireme").click(function(){
+            $.scrollTo( "#contact", 1000 );
+        }); 
         
         $('#ticker').newsTicker({
             row_height: 22,
