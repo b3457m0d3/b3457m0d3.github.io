@@ -42,17 +42,19 @@ $(function() {
             $('#charCount').html('<h5><span class="open-sans-c">Chars Left:</span> <span class="badge pull-right">' + text_remaining + '</span></h5>');
         });
         $html = "<h3 class='arvo'>Please Include The Following:</h3><span class='source-code'><ul class='list-unstyled'>"
-               +"<li>What kind of company?</li><li>Deadline?<li>"
-               +"<li>Special requirements/considerations?</li>"
-               +"<li></li></ul></span>";
-        $( "#message" ).popover({container:"body",title:"<i class='fa fa-question-circle fa-3x pull-right'></i>",content:$html,html:true,placement:"left",trigger:"focus"});
+               +"<li><i class='fa fa-check-square-o pull-left'></i>What kind of company?</li>"
+               +"<li><i class='fa fa-check-square-o pull-left'></i>Deadline?<li>"
+               +"<li><i class='fa fa-check-square-o pull-left'></i>Special requirements/considerations?</li>"
+               +"<li><i class='fa fa-check-square-o pull-left'></i>Do you already have a web host?</li>"
+               +"</ul></span>";
+        $( "#message" ).popover({container:"body",title:"Inquiry Details<i class='fa fa-pencil-square-o fa-3x pull-right'></i>",content:$html,html:true,placement:"left",trigger:"focus"});
         
         
         var $_GET = getQueryParams(document.location.search);
         if($_GET['sent']){
             $('#thanks').modal('show'); 
         }
-        /* form.brace.io will soon be implementin ajax ready forms
+        /* form.brace.io will soon be implementing ajax ready forms
             so this is forward thinking...
         $( "#contact" ).submit(function( event ) { 
             event.preventDefault();
