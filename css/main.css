@@ -9,6 +9,9 @@
 .source-code {font-family:"Source Code Pro";}
 .open-sans-c {font-family:"Open Sans Condensed";}
 .arvo {font-family:"Arvo";}
+.footer-grey {
+    color:#20262c;
+}
 textarea.expanding {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
