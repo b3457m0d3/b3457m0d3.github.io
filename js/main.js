@@ -31,13 +31,13 @@ $(function() {
         });
         
         var text_max = 500;
-        $('#charCount').html('<h5><span class="open-sans-c">chars left:</span> <span class="badge pull-right">' + text_max + '</span></h5>');
+        $('#charCount').html('<h5><span class="open-sans-c">Chars Left:</span> <span class="badge pull-right">' + text_max + '</span></h5>');
     
         $('#message').keyup(function() {
             var text_length = $('#message').val().length;
             var text_remaining = text_max - text_length;
     
-            $('#charCount').html('<h5><span class="open-sans-c">chars left:</span> <span class="badge pull-right">' + text_remaining + '</span></h5>');
+            $('#charCount').html('<h5><span class="open-sans-c">Chars Left:</span> <span class="badge pull-right">' + text_remaining + '</span></h5>');
         });
         $html = "<h3 class='arvo'>Please Answer The Following:</h3><span class='open-sans-c'><ul class='list-unstyled'>"
                +"<li>What kind of company?</li><li>Deadline?<li>"
