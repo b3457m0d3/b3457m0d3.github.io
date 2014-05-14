@@ -3,7 +3,10 @@
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
 .sp-elite {font-family:"Special Elite";}
 .poiret-one {font-family:"Poiret One",cursive;}
 .source-code {font-family:"Source Code Pro";}
