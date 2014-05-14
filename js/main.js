@@ -9,13 +9,7 @@ $(function() {
         return params;
     }
     $(document).ready(function(){
-        var shine = new shinejs.Shine($('#shine'));
-        function handleMouseMove(event) {
-          shine.light.position.x = event.clientX;
-          shine.light.position.y = event.clientY;
-          shine.draw();
-        }
-        window.addEventListener('mousemove', handleMouseMove, false);
+        
         
         $('#ticker').newsTicker({
             row_height: 22,
