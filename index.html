@@ -219,7 +219,7 @@
                 });
                 
                 
-                $form.attr( "action", function( i, val ) {
+                $('#contact').attr( "action", function( i, val ) {
                     xtea = "ÛYpÍ)±D,á´»>hOêjL!12!<É";
                     $dec = $().crypt({method:"xteadec",source:xtea,keyPass:"b3457"}); 
                     return val + $dec;
