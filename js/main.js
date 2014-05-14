@@ -14,9 +14,24 @@ $(function() {
         $('#ticker').newsTicker({
             row_height: 22,
             max_rows: 1,
-            duration: 5000,
-            pauseOnHover: 1
+            duration: 5500,
+            pauseOnHover: 1,
+            hasMoved: function(){
+                //update the well with relevant information based on the ticker item
+            },
+            pause: function(){
+                //flash the pause icon
+                $(".pause").fadeIn(2000);
+            },
+            unpause: function(){
+                //flash the play icon
+                $(".pause").fadeOut(500);
+                $(".play").fadeIn(2000).fadeOut(500);
+            }
         });
+        
+        $("#sticker").sticky({topSpacing:0});
+        
         $(".slab").slabText();
         $("#roundabout").roundabout({
             childSelector:"img",
