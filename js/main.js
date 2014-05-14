@@ -16,8 +16,11 @@ $(function() {
             max_rows: 1,
             duration: 5500,
             pauseOnHover: 1,
-            hasMoved: function(){
-                //update the well with relevant information based on the ticker item
+            hasMoved: function() {
+                $('#sticker').fadeOut(200, function(){
+                    $('#sticker').html($('#ticker li:first').data('legend'));
+                    $(this).fadeIn(400);
+                });
             },
             pause: function(){
                 //flash the pause icon
