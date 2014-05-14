@@ -11,7 +11,7 @@ $(function() {
     $(document).ready(function(){
         
         $("#hireme").click(function(){
-            $.scrollTo( "#contact", 1000 );
+            $.scrollTo( "#contact", 1000, {onAfter:function(){ $("#_replyto").focus(); };} );
         }); 
         
         $('#ticker').newsTicker({
