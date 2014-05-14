@@ -23,6 +23,7 @@ $(function() {
                 });
             },
             pause: function(){
+                $(".play").hide();
                 $(".pause").fadeIn(2000);
             },
             unpause: function(){
