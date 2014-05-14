@@ -47,7 +47,7 @@ $(function() {
                +"<li><i class='fa fa-check-square-o pull-left'></i>Special requirements?</li>"
                +"<li><i class='fa fa-check-square-o pull-left'></i>Do you already have a web host?</li>"
                +"</ul></span>";
-        $( "#message" ).popover({container:"body",title:"Inquiry Details<i class='fa fa-pencil-square-o fa-3x pull-right'></i>",content:$html,html:true,placement:"left",trigger:"focus"});
+        $( "#message" ).popover({container:"body",title:"<span class='open-sans-c h4'>Inquiry Details</span><i class='fa fa-pencil-square-o fa-3x pull-right'></i>",content:$html,html:true,placement:"left",trigger:"focus"});
         
         
         var $_GET = getQueryParams(document.location.search);
