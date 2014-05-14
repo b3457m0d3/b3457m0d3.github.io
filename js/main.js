@@ -39,7 +39,7 @@ $(function() {
     
             $('#charCount').html('<h5>chars left: <span class="badge pull-right">' + text_remaining + '</span></h5>');
         });
-        $html = "<span class='open-sans-c'>Please Answer The Following:<br/><ul class='list-unstyled'>"
+        $html = "<h3 class='arvo'>Please Answer The Following:</h3><span class='open-sans-c'><ul class='list-unstyled'>"
                +"<li>What kind of company?</li><li>Deadline?<li>"
                +"<li>Special requirements/considerations?</li></ul></span>";
         $( "#message" ).popover({container:"body",title:"Help",content:$html,html:true,placement:"left",trigger:"focus"});
