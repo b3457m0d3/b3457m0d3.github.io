@@ -17,11 +17,11 @@ body {
 }
 .play {
     display:none;
-    margin-top:0px;
+    margin-top:-10px;
 }
 .pause {
     display:none;
-    margin-top:0px;
+    margin-top:-10px;
 }
 textarea.expanding {
   -webkit-box-sizing: border-box;
