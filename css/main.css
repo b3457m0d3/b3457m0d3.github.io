@@ -15,6 +15,9 @@ body {
 .footer-grey {
     color:#20262c;
 }
+.white {
+    color:#fff;
+}
 .android-green {
     color:#A4C739;
 }
@@ -85,7 +88,7 @@ color:#0097ef;
     border-bottom:10px solid #0097ef;
 }
 #sticker {
-    background:#000;
+    background:#14171d;
     min-width:30%;
 }
 
