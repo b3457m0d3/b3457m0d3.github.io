@@ -32,7 +32,7 @@ $(function() {
                 $(".play").fadeIn(2000).fadeOut(500);
             }
         });
-        
+        $('#sticker').html($('#ticker li:first').data('legend'));
         $("#sticker").sticky({topSpacing:70});
         
         $(".slab").slabText();
