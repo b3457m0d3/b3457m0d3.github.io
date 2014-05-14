@@ -41,13 +41,13 @@ $(function() {
     
             $('#charCount').html('<h5><span class="open-sans-c">Chars Left:</span> <span class="badge pull-right">' + text_remaining + '</span></h5>');
         });
-        $html = "<h3 class='arvo'>Please Include The Following:</h3><span class='source-code'><ul class='list-unstyled'>"
+        $html = "<h5 class='arvo blue'>Please Include The Following:</h3><span class='source-code'><ul class='list-unstyled'>"
                +"<li><i class='fa fa-check-square-o pull-left'></i>What kind of company?</li>"
                +"<li><i class='fa fa-check-square-o pull-left'></i>Deadline?<li>"
                +"<li><i class='fa fa-check-square-o pull-left'></i>Special requirements?</li>"
                +"<li><i class='fa fa-check-square-o pull-left'></i>Do you already have a web host?</li>"
                +"</ul></span>";
-        $( "#message" ).popover({container:"body",title:"<span class='open-sans-c h4'>Inquiry Details</span><i class='fa fa-pencil-square-o fa-3x pull-right'></i>",content:$html,html:true,placement:"left",trigger:"focus"});
+        $( "#message" ).popover({container:"body",title:"<span class='open-sans-c h3'>Inquiry Details</span><i class='fa fa-pencil-square-o fa-3x pull-right'></i>",content:$html,html:true,placement:"left",trigger:"focus"});
         
         
         var $_GET = getQueryParams(document.location.search);
