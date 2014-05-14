@@ -16,7 +16,7 @@ $(function() {
             max_rows: 1,
             duration: 5500,
             pauseOnHover: 1,
-            movingUp: function() {
+            hasMoved: function() {
                 $('#sticker').fadeOut(200, function(){
                     $('#sticker').html($('#ticker li:first').data('legend'));
                     $(this).fadeIn(400);
