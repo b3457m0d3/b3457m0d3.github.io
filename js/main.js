@@ -30,7 +30,7 @@ $(function() {
             }
         });
         
-        $("#sticker").sticky({topSpacing:0});
+        $("#sticker").sticky({topSpacing:50});
         
         $(".slab").slabText();
         $("#roundabout").roundabout({
