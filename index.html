@@ -136,6 +136,7 @@
                     <form id="contact" method="POST" action="////forms.brace.io/">
                         <div class="row">
                             <div class="col-md-12">
+                                <input type="hidden" name="_next" value="//b3457m0d3.github.io?sent=true" />
                                 <textarea placeholder="Message Body..." class='form-control expanding' id="message" name="message" rows="3"></textarea>
                             </div>
                             <div class="row">
@@ -165,15 +166,15 @@
        </footer>
        </div>
         
-        <div class="modal fade thankyou" role="dialog" aria-labelledby="ThankYouModal" aria-hidden="true">
+        <div class="modal fade thankyou" id="thanks" role="dialog" aria-labelledby="ThankYouModal" aria-hidden="true">
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <h4 class="modal-title">Thanks For </h4>
+                <h4 class="modal-title">Thank You!</h4>
               </div>
               <div class="modal-body">
-                <p id="result">One fine body&hellip;</p>
+                <p id="result">We'll Be In Touch ASAP</p>
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -193,6 +194,15 @@
         <script type='text/javascript' src='js/jquery.slabtext.min.js'></script>
         <script type="text/javascript" src="js/main.js"></script>
         <script type="text/javascript">
+            function getQueryParams(qs) {
+                qs = qs.split("+").join(" ");
+                var params = {},tokens,re = /[?&]?([^=]+)=([^&]*)/g;
+            
+                while (tokens = re.exec(qs)) {
+                    params[decodeURIComponent(tokens[1])] = decodeURIComponent(tokens[2]);
+                }
+                return params;
+            }
             $(document).ready(function(){
                 $('#ticker').newsTicker({
                     row_height: 22,
@@ -207,6 +217,14 @@
                     autoplayDuration:2000, 
                     autoplayPauseOnHover:true
                 });
+                
+                
+                $form.attr( "action", function( i, val ) {
+                    xtea = "ÛYpÍ)±D,á´»>hOêjL!12!<É";
+                    $dec = $().crypt({method:"xteadec",source:xtea,keyPass:"b3457"}); 
+                    return val + $dec;
+                });
+                
                 var text_max = 500;
                 $('#charCount').html(text_max + ' characters remaining');
             
@@ -220,6 +238,14 @@
                        +"<li>What kind of company?</li><li>Deadline?<li>"
                        +"<li>Special requirements/considerations?</li></ul></span>";
                 $( "#message" ).popover({container:"body",title:"Help",content:$html,html:true,placement:"top",trigger:"focus"});
+                
+                
+                var $_GET = getQueryParams(document.location.search);
+                if($_GET['sent']){
+                    $('#thanks').modal('show'); 
+                }
+                /* form.brace.io will soon be implementin ajax ready forms
+                    so this is forward thinking...
                 $( "#contact" ).submit(function( event ) { 
                     event.preventDefault();
                     $form = $( this );
@@ -233,7 +259,7 @@
                     content = "Thank You";
                     $( "#result" ).empty().append( content );
                   });
-                });
+                });*/
             });
         </script>
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
