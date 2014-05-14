@@ -23,6 +23,8 @@ body {
     display:none;
     margin-top:-10px;
 }
+
+
 textarea.expanding {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
