@@ -72,7 +72,7 @@ textarea.expanding {
 .roundabout-in-focus{cursor:auto;}
 #ticker {margin-top:10px;margin-right:10px;}
 #ticker li{
-    width:300px;
+    width:100%;
     float:right;
 	font-size: 18px;
     padding:1px;
