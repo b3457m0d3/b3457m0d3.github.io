@@ -25,7 +25,7 @@ $(function() {
             },
             unpause: function(){
                 //flash the play icon
-                $(".pause").fadeOut(500);
+                $(".pause").hide();
                 $(".play").fadeIn(2000).fadeOut(500);
             }
         });
