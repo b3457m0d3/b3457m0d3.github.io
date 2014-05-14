@@ -44,7 +44,7 @@ $(function() {
         $html = "<h3 class='arvo'>Please Include The Following:</h3><span class='source-code'><ul class='list-unstyled'>"
                +"<li><i class='fa fa-check-square-o pull-left'></i>What kind of company?</li>"
                +"<li><i class='fa fa-check-square-o pull-left'></i>Deadline?<li>"
-               +"<li><i class='fa fa-check-square-o pull-left'></i>Special requirements/considerations?</li>"
+               +"<li><i class='fa fa-check-square-o pull-left'></i>Special requirements?</li>"
                +"<li><i class='fa fa-check-square-o pull-left'></i>Do you already have a web host?</li>"
                +"</ul></span>";
         $( "#message" ).popover({container:"body",title:"Inquiry Details<i class='fa fa-pencil-square-o fa-3x pull-right'></i>",content:$html,html:true,placement:"left",trigger:"focus"});
