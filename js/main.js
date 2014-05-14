@@ -23,18 +23,22 @@ $(function() {
                 });
             },
             pause: function(){
-                //flash the pause icon
                 $(".pause").fadeIn(2000);
             },
             unpause: function(){
-                //flash the play icon
                 $(".pause").hide();
                 $(".play").fadeIn(2000).fadeOut(500);
             }
         });
         $('#sticker').html($('#ticker li:first').data('legend'));
-        $("#sticker").sticky({topSpacing:70});
-        
+        $("#sticker").hover( 
+            function() {
+                $("#ticker").newsTicker('pause');
+            }, 
+            function() {
+                $("#ticker").newsTicker('unpause');
+            }
+        );
         $(".slab").slabText();
         $("#roundabout").roundabout({
             childSelector:"img",
