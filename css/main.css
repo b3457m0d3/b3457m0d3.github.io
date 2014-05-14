@@ -70,9 +70,8 @@ textarea.expanding {
 .roundabout-moveable-item{height:100px;width:100px;cursor:pointer;border:1px solid black;display:block;}
 .roundabout-moveable-item img{height:100%;width:100%;}
 .roundabout-in-focus{cursor:auto;}
-#ticker {margin-top:10px;width:80%;}
+#ticker {margin-top:10px;}
 #ticker li{
-    width:inherit;
     float:right;
 	font-size: 18px;
     padding:1px;
