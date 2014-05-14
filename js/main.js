@@ -32,14 +32,14 @@ $(function() {
             }
         });
         $('#sticker').html($('#ticker li:first').data('legend'));
-        $("#sticker").hover( 
+        /*$("#sticker").hover( 
             function() {
                 $("#ticker").newsTicker('pause');
             }, 
             function() {
                 $("#ticker").newsTicker('unpause');
             }
-        );
+        );*/
         $(".slab").slabText();
         $("#roundabout").roundabout({
             childSelector:"img",
