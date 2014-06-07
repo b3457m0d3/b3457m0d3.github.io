@@ -4,9 +4,6 @@ $(document).ready(function(){
       url: "//syrscreenprinting.com/api/hello/b3457",
       dataType: 'json',
       async: false,
-      headers: {
-        "Authorization":"Basic " + btoa('b3457:w1nn1ng')
-      },
       success: function (){
         $('#result').html('Thanks for your comment!'); 
       }
