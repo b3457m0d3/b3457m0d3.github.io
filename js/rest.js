@@ -5,7 +5,7 @@ $(document).ready(function(){
       dataType: 'json',
       async: false,
       headers: {
-        "Authorization", btoa('b3457:w1nn1ng')
+        "Authorization":"Basic " + btoa('b3457:w1nn1ng')
       },
       success: function (){
         $('#result').html('Thanks for your comment!'); 
