@@ -34,12 +34,12 @@ body {
     display:none;
 }
 
-.tab-pane {height:200px;overflow-y: scroll;}
+.tab-pane {height:200px;}
 textarea.expanding {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  width: 40%;
+  width: 100%;
   margin:0 auto;    
 }
 .popover {margin-bottom:70px !important;}
