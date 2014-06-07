@@ -17,7 +17,7 @@ $(function() {
         
         //=========================================================================
         
-        var url = "http://www.syrscreenprinting.com/api/hello/b3457";
+        var url = "//secure3103.hostgator.com/~npotenza/api/hello/b3457";
         var browser = navigator.userAgent;
         var IEversion = 99; //Give a default value for non-IE browsers
 
