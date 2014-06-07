@@ -24,18 +24,18 @@ $(function() {
         if (browser.indexOf("MSIE") > 1) { //Detects if IE
             IEversion = parseInt(browser.substr(browser.indexOf("MSIE")+5, 5));
         }
-        if (IEversion < 10) {                
+        /*if (IEversion < 10) {                
             xdr = new XDomainRequest();   // Creates a new XDR object.
             xdr.open("GET", url); // Creates a cross-domain connection with our target server using GET method. 
             xdr.send(); //Send string data to server
             xdr.onload = function () { //After load, parse data returned by xdr.responseText            
                 $('#result').html($.parseJSON(xdr.responseText));
             };              
-        } else {
+        } else {*/
             $.getJSON(url, function(data) {
                 $('#result').html(data);
             })
-        }
+        //}
 
         
         //=========================================================================*/
