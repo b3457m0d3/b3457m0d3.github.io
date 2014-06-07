@@ -31,11 +31,11 @@ $(function() {
             xdr.onload = function () { //After load, parse data returned by xdr.responseText            
                 $('#result').html($.parseJSON(xdr.responseText));
             };              
-        } else {*/
+        } else {
             $.getJSON(url, function(data) {
                 $('#result').html(data);
             })
-        //}
+        //}*/
 
         
         //=========================================================================*/
