@@ -16,7 +16,8 @@ $(function() {
         }); 
         
         var client = new $.RestClient('//secure3103.hostgator.com/~npotenza/api/');
-        client.read('hello/b3457').done(function (data){
+        client.add('hello');
+        client.hello.read('b3457').done(function (data){
           alert('I have data: ' + data);
         });
         
