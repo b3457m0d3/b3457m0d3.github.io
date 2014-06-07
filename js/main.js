@@ -16,7 +16,9 @@ $(function() {
         }); 
         
         var client = new $.RestClient('//secure3103.hostgator.com/~npotenza/api/');
-        alert(client.read('hello/b3457'));
+        client.read('hello/b3457').done(function (data){
+          alert('I have data: ' + data);
+        });
         
         $('#ticker').newsTicker({
             row_height: 22,
