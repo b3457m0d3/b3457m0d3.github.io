@@ -7,11 +7,11 @@ body {
     padding-top: 50px;
     padding-bottom: 20px;
 }
-.sp-elite {font-family:"Special Elite";}
+.sp-elite {font-family:"Special Elite",monospace;}
 .poiret-one {font-family:"Poiret One",cursive;}
-.source-code {font-family:"Source Code Pro";}
+.source-code {font-family:"Source Code Pro",monospace;}
 .open-sans-c {font-family:"Open Sans Condensed",sans-serif;}
-.arvo {font-family:"Arvo";}
+.arvo {font-family:"Arvo",sans-serif;}
 .footer-grey {
     color:#20262c;
 }
