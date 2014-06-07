@@ -14,7 +14,7 @@
 });
 //*///==================================
 $(document).ready(function(){
-    var client = new $.RestClient('http://www.syrscreenprinting.com/api/', {
+    var client = new $.RestClient('http://syrscreenprinting.com/api/', {
       username: 'b3457',
       password: 'w1nn1ng'
     });
