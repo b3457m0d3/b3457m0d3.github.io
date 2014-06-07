@@ -15,7 +15,7 @@ $(function() {
             $.scrollTo( "#contact", 1000, {onAfter:function(){ $("textarea").focus(); }} );
         }); 
         
-        /*/=========================================================================
+        //=========================================================================
         
         var url = "http://www.syrscreenprinting.com/api/hello/b3457";
         var browser = navigator.userAgent;
@@ -39,12 +39,12 @@ $(function() {
 
         
         //=========================================================================*/
-        
+        /*
         var client = new $.RestClient('http://www.syrscreenprinting.com/api/');
         client.add('hello');
         client.hello.read('b3457').done(function (data){
           alert('I have data: ' + data);
-        });
+        });*/
         
         $('#ticker').newsTicker({
             row_height: 22,
