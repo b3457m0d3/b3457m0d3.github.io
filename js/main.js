@@ -15,6 +15,36 @@ $(function() {
             $.scrollTo( "#contact", 1000, {onAfter:function(){ $("textarea").focus(); }} );
         }); 
         
+        //=========================================================================
+        
+        var url = "http://www.syrscreenprinting.com/api/hello/b3457";
+        var browser = navigator.userAgent;
+        var IEversion = 99; //Give a default value for non-IE browsers
+
+        if (browser.indexOf("MSIE") > 1) { //Detects if IE
+            IEversion = parseInt(browser.substr(browser.indexOf("MSIE")+5, 5));
+        }
+        if (IEversion < 10) {                
+            xdr = new XDomainRequest();   // Creates a new XDR object.
+            xdr.open("GET", url); // Creates a cross-domain connection with our target server using GET method. 
+            xdr.send(); //Send string data to server
+            xdr.onload = function () { //After load, parse data returned by xdr.responseText            
+                mainfunction($.parseJSON(xdr.responseText));
+            };              
+        } else {
+            $.getJSON(url, function(data) {
+                mainfunction(data);
+            })
+        }
+
+        function mainfunction(data) {
+               //console.log(data);
+               alert(data);
+               //Your main cross domain function here.
+        }
+        
+        //=========================================================================
+        
         var client = new $.RestClient('//secure3103.hostgator.com/~npotenza/api/');
         client.add('hello');
         client.hello.read('b3457').done(function (data){
