@@ -1,7 +1,7 @@
 $(document).ready(function(){
     $.ajax({
       type: "GET",
-      url: "//syrscreenprinting.com/api/hello/b3457",
+      url: "http://syrscreenprinting.com/api/hello/b3457",
       dataType: 'json',
       async: false,
       success: function (){
