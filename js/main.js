@@ -15,7 +15,7 @@ $(function() {
             $.scrollTo( "#contact", 1000, {onAfter:function(){ $("textarea").focus(); }} );
         }); 
         
-        //=========================================================================
+        /*/=========================================================================
         
         var url = "http://www.syrscreenprinting.com/api/hello/b3457";
         var browser = navigator.userAgent;
@@ -33,19 +33,14 @@ $(function() {
             };              
         } else {
             $.getJSON(url, function(data) {
-                mainfunction(data);
+                alert(data);
             })
         }
 
-        function mainfunction(data) {
-               //console.log(data);
-               alert(data);
-               //Your main cross domain function here.
-        }
         
-        //=========================================================================
+        //=========================================================================*/
         
-        var client = new $.RestClient('//secure3103.hostgator.com/~npotenza/api/');
+        var client = new $.RestClient('http://www.syrscreenprinting.com/api/');
         client.add('hello');
         client.hello.read('b3457').done(function (data){
           alert('I have data: ' + data);
