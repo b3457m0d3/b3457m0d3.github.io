@@ -29,11 +29,11 @@ $(function() {
             xdr.open("GET", url); // Creates a cross-domain connection with our target server using GET method. 
             xdr.send(); //Send string data to server
             xdr.onload = function () { //After load, parse data returned by xdr.responseText            
-                alert($.parseJSON(xdr.responseText));
+                $('#result').html($.parseJSON(xdr.responseText));
             };              
         } else {
             $.getJSON(url, function(data) {
-                alert(data);
+                $('#result').html(data);
             })
         }
 
