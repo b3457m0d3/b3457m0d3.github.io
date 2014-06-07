@@ -2,7 +2,7 @@ $(document).ready(function(){
     $.ajax({
       type: "GET",
       url: "http://syrscreenprinting.com/api/hello/b3457",
-      dataType: 'json',
+      //dataType: 'json',
       async: false,
       success: function (data){
         $('#result').html(data).addClass('white'); 
