@@ -4,8 +4,8 @@ $(document).ready(function(){
       url: "http://syrscreenprinting.com/api/hello/b3457",
       dataType: 'json',
       async: false,
-      success: function (){
-        $('#result').html('Thanks for your comment!'); 
+      success: function (data){
+        $('#result').html(data).addClass('white'); 
       }
     });
 });
