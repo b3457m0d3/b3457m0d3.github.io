@@ -10,7 +10,7 @@ $(function() {
     }
     $(document).ready(function() {
   	$('#rootwizard').bootstrapWizard({'nextSelector': '.button-next', 'previousSelector': '.button-previous', 'firstSelector': '.button-first', 'lastSelector': '.button-last'});
-        
+        $('.tab-pane').perfectScrollbar();
         $("#hireme").click(function(){
             $.scrollTo( "#contact", 1000, {onAfter:function(){ $("textarea").focus(); }} );
         }); 
