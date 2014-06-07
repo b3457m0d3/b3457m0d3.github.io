@@ -108,26 +108,18 @@
             </div>
             <div class="tab-pane" id="tab7">
                 <form id="contact" method="POST" action="////forms.brace.io/">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <input type="hidden" name="_next" value="//b3457m0d3.github.io?sent=true" />
-                                <textarea placeholder="Message Body..." class='form-control expanding' id="message" name="message" rows="3"></textarea>
-                                <small>
-                                    <span id="charCount" class="open-sans-c pull-right"></span>
-                                </small>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-12">  
-                                    <span class="input-group">
-                                        <input class="form-control" type="email" id="_replyto" name="_replyto" placeholder="Your email" />
-                                        <span class="input-group-btn">
-                                            <button class="btn btn-primary" type="submit">Send</button>
-                                        </span>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
+                    <input type="hidden" name="_next" value="//b3457m0d3.github.io?sent=true" />
+                    <textarea placeholder="Message Body..." class='form-control expanding' id="message" name="message" rows="3"></textarea>
+                    <small>
+                        <span id="charCount" class="open-sans-c pull-right"></span>
+                    </small>
+                    <span class="input-group">
+                        <input class="form-control" type="email" id="_replyto" name="_replyto" placeholder="Your email" />
+                        <span class="input-group-btn">
+                            <button class="btn btn-primary" type="submit">Send</button>
+                        </span>
+                    </span>
+                </form>
             </div>
             <div style="float:right">
                 <button class='btn button-next' name='next'><i class="fa fa-chevron-right blue"></i></button>
