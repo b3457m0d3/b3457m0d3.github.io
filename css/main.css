@@ -31,7 +31,7 @@ body {
     display:none;
 }
 
-
+.tab-pane {height:200px;overflow-y: scroll;}
 textarea.expanding {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
