@@ -12,19 +12,15 @@ $(function() {
         
         var $validator = $("#contactForm").validate({
           ignore : ".ignore",
-          onkeyup: false,
-          focusCleanup: true,
 		  rules  : {
 		    email: { required: true, minlength: 3, email: true },
 		    name : { required: true, minlength: 3 },
 		    body : { required: true, minlength: 3 }
 		  },
-          /*groups: {
-            username: "fname lname"
-          },*/
           tooltip_options: {
-            example4: {trigger:'focus'},
-            example5: {placement:'right',html:true}
+            name: {placement:'top',trigger:'manual'},
+            email: {placement:'right',html:true},
+            body: {placement:'right',html:true}
           }
 		});
         
