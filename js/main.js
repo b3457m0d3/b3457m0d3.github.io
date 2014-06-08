@@ -67,7 +67,7 @@ $(function() {
                     
                     $('.typist').typed({
                         strings: ["b3457m0d3"],
-                        typeSpeed: 0
+                        typeSpeed: 30
                     });
                     //.typist({'fontFamily':"Special Elite",'textColor':"#0f86ce"}).typist('type', 'b3457m0d3'); 
 
