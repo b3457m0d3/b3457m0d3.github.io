@@ -68,11 +68,12 @@ $(function() {
                     $('#welcomeText').html('Hi').addClass('text-primary');
                     $('#nameText').html($('#contactForm').data("name").capitalize()).addClass('text-info');
                     $('#nameText').parent().find('small').html('You can call me <span class="typist" data-txt="b3457m0d3"></span>').before('<br/>');
-                    var beforeShowEvent = $.Event('beforeshow.tab');
-                    $tab.trigger(beforeShowEvent);
+                    
+                    var insertTypistEvent = $.Event('insert.typist');
+                    $(document).trigger(insertTypistEvent);
 
-                    if (beforeShowEvent.result !== false) {
-                      // show the tab
+                    if (insertTypistEvent.result !== false) {
+                      alert('typist added!');
                     }
                     $icon.fadeOut().removeClass('fa-spinner fa-spin').addClass('fa-check').fadeIn();
                     $(this).removeClass('btn-info').addClass('btn-success');
