@@ -62,10 +62,8 @@ $(function() {
                     
                     $('#welcomeText').html('Hi').addClass('text-primary');
                     $('#nameText').html($('#contactForm').data("name").capitalize()).addClass('text-info');
-                    $('#nameText').parent().find('small').html('You can call me <p class="typist sp-elite blue" data-txt="b3457m0d3"></p>').before('<br/>');
-                    $('.typist').typist({
-                        speed: 12, text: $(this).data('txt')
-                    });
+                    $('#nameText').parent().find('small').html('You can call me <span id="typist" class="sp-elite blue" data-txt="b3457m0d3"></span>').before('<br/>');
+                    $('#typist').typist({ speed: 12, text: $(this).data('txt') });
                     $icon.fadeOut().removeClass('fa-spinner fa-spin').addClass('fa-check').fadeIn();
                     $(this).removeClass('btn-info').addClass('btn-success');
                     
