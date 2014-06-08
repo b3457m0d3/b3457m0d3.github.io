@@ -49,37 +49,20 @@ $(function() {
                 $icon = $(this).find('i');
                 
                 $(this).attr('class','btn btn-info');
-                $icon.attr('class','fa fa-comment');
+                $icon.attr('class','fa fa-spinner fa-spin');
                 
-                $icon.fadeOut().addClass('fa-spinner fa-spin').fadeIn();
                 var validator = $( "#contactForm" ).validate();
                 if(validator.element( "#name" )){
                     $('#next').removeClass('disabled');
                     $('#to2').fadeIn();
                     $('#contactForm').data("name",$('#name').val());
-                    $(this).removeClass('btn-info').addClass('btn-success');
+                    
                     $icon.fadeOut().removeClass('fa-spinner fa-spin').addClass('fa-check').fadeIn();
+                    $(this).removeClass('btn-info').addClass('btn-success');
+                    
                 } else {
                     $icon.fadeOut().removeClass('fa-spinner fa-spin').addClass('fa-ban').fadeIn();
                     $(this).removeClass('btn-info').addClass('btn-warning');
-                }
-            }
-        );
-        $('#name').keydown(
-            function(event){
-                if ( event.which == 13 ) {
-                    event.preventDefault();
-                    $('#nameBtn').find('i').fadeOut().removeClass('fa-comment').addClass('fa-spinner fa-spin').show();
-                    var validator = $( "#contactForm" ).validate();
-                    if(validator.element( "#name" )){
-                        $('#next').removeClass('disabled');
-                        $('#to2').fadeIn();
-                        $('#contactForm').data("name",$('#name').val());
-                        $('#nameBtn').find('i').fadeOut().removeClass('fa-spinner fa-spin').addClass('fa-check').fadeIn();
-                    } else {
-                        $('#nameBtn').hasClass();
-                        $('#nameBtn').find('i').fadeOut().removeClass('fa-spinner fa-spin').addClass('fa-ban').fadeIn();
-                    }
                 }
             }
         );
