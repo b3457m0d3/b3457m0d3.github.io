@@ -66,7 +66,7 @@ $(function() {
                       }, 5000, "linear", function() {
                         alert( "Animation complete." );
                       });
-                    });
+                    };
                     
                 } else {
                     $icon.fadeOut().removeClass('fa-spinner fa-spin').addClass('fa-ban').fadeIn();
