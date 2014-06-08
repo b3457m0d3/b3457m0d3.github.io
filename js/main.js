@@ -57,7 +57,7 @@ $(function() {
                     $('#to2').fadeIn();
                     $('#contactForm').data("name",$('#name').val());
                     
-                    alert($('#contactForm').data("name"));
+                    //alert($('#contactForm').data("name"));
                     $icon.fadeOut().removeClass('fa-spinner fa-spin').addClass('fa-check').fadeIn();
                     $(this).removeClass('btn-info').addClass('btn-success');
                     
