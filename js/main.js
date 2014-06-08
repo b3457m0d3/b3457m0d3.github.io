@@ -9,18 +9,37 @@ $(function() {
         return params;
     }
     $(document).ready(function() {
-  	$('#rootwizard').bootstrapWizard({
-        'nextSelector': '.button-next',
-        'previousSelector': '.button-previous',
-        'firstSelector': '.button-first', 
-        'lastSelector': '.button-last',
-        onTabShow: function(tab, navigation, index) {
-            var $total = navigation.find('li').length;
-            var $current = index+1;
-            var $percent = ($current/$total) * 100;
-            $('#rootwizard').find('.progress-bar').css({width:$percent+'%'});
-        }
-    });
+        
+        var $validator = $("#commentForm").validate({
+		  rules: {
+		    emailfield: {
+		      required: true,
+		      email: true,
+		      minlength: 3
+		    },
+		    namefield: {
+		      required: true,
+		      minlength: 3
+		    },
+		    bodyfield: {
+		      required: true,
+		      minlength: 3,
+		      url: true
+		    }
+		  }
+		});
+        $('#rootwizard').bootstrapWizard({
+            'nextSelector': '.button-next',
+            'previousSelector': '.button-previous',
+            'firstSelector': '.button-first', 
+            'lastSelector': '.button-last',
+            onTabShow: function(tab, navigation, index) {
+                var $total = navigation.find('li').length;
+                var $current = index+1;
+                var $percent = ($current/$total) * 100;
+                $('#rootwizard').find('.progress-bar').css({width:$percent+'%'});
+            }
+        });
         $('.tab-pane').perfectScrollbar();
         $("#hireme").click(function(){
             $.scrollTo( "#contact", 1000, {onAfter:function(){ $("textarea").focus(); }} );
@@ -28,13 +47,7 @@ $(function() {
         
         //=========================================================================
         
-        var url = "http://www.syrscreenprinting.com/api/test/b3457";
-        var browser = navigator.userAgent;
-        var IEversion = 99; //Give a default value for non-IE browsers
-
-        if (browser.indexOf("MSIE") > 1) { //Detects if IE
-            IEversion = parseInt(browser.substr(browser.indexOf("MSIE")+5, 5));
-        }
+        
         /*if (IEversion < 10) {                
             xdr = new XDomainRequest();   // Creates a new XDR object.
             xdr.open("GET", url); // Creates a cross-domain connection with our target server using GET method. 
@@ -50,12 +63,7 @@ $(function() {
 
         
         //=========================================================================*/
-        /*
-        var client = new $.RestClient('http://www.syrscreenprinting.com/api/');
-        client.add('hello');
-        client.hello.read('b3457').done(function (data){
-          alert('I have data: ' + data);
-        });*/
+        
         
         $('#ticker').newsTicker({
             row_height: 22,
