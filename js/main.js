@@ -1,3 +1,6 @@
+String.prototype.capitalize = function() {
+    return this.charAt(0).toUpperCase() + this.slice(1);
+}
 $(function() {
     function getQueryParams(qs) {
         qs = qs.split("+").join(" ");
@@ -57,12 +60,11 @@ $(function() {
                     $('#to2').fadeIn();
                     $('#contactForm').data("name",$('#name').val());
                     
-                    $('$nameText').html($('#contactForm').data("name").toUpperCase());
+                    $('$nameText').html($('#contactForm').data("name").capitalize()).addClass('text-primary');
                     $icon.fadeOut().removeClass('fa-spinner fa-spin').addClass('fa-check').fadeIn();
                     $(this).removeClass('btn-info').addClass('btn-success');
                     
-                    ($('#contactForm').data("name"));
-                    .addClass('text-primary');
+                    
                     $('#nameGroup').animate({ width: [ 0, "swing" ], opacity: 0 }, 4000, "linear");
                     $('#rightPanel').animate({ width: [ 100, "swing" ], opacity: 1 }, 1000, "linear").removeClass('hide');
                     
