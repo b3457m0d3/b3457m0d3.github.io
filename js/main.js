@@ -36,6 +36,12 @@ $(function() {
 	  			}
 	  		}
         });
+        $('#name').keyup(function(){
+            var validator = $( "#contactForm" ).validate();
+            if(validator.element( "#name" )){
+                
+            }
+        });
         $('.tab-pane').perfectScrollbar();
         $("#hireme").click(function(){
             $.scrollTo( "#contact", 1000, {onAfter:function(){ $("textarea").focus(); }} );
