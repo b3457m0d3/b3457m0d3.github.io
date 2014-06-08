@@ -39,7 +39,7 @@ $(function() {
         $('#name').keyup(function(){
             var validator = $( "#contactForm" ).validate();
             if(validator.element( "#name" )){
-                
+                $('#next,#to2').removeClass('disabled');
             }
         });
         $('.tab-pane').perfectScrollbar();
