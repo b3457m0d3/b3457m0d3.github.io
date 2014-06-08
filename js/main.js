@@ -45,13 +45,17 @@ $(function() {
         });
         $('#nameBtn').click(
             function(){
-                $(this).find('i').fadeOut().removeClass('fa-comment').addClass('fa-spinner fa-spin').show();
-                var validator = $( "#contactForm" ).validate({ignore:".ignore"});
+                $(this).find('i').fadeOut().toggleClass('fa-comment').addClass('fa-spinner fa-spin').show();
+                var validator = $( "#contactForm" ).validate();
                 if(validator.element( "#name" )){
                     $('#next').removeClass('disabled');
                     $('#to2').fadeIn();
                     $('#contactForm').data("name",$('#name').val());
-                    $(this).find('i').fadeOut().removeClass('fa-spinner fa-spin').addClass('fa-check').show();
+                    $(this).removeClass('btn-info').addClass('btn-success');
+                    $(this).find('i').fadeOut().removeClass('fa-spinner fa-spin').addClass('fa-check').fadeIn();
+                } else {
+                    $(this).find('i').fadeOut().removeClass('fa-spinner fa-spin').addClass('fa-ban').fadeIn();
+                    $(this).removeClass('btn-info').addClass('btn-warning');
                 }
             }
         );
