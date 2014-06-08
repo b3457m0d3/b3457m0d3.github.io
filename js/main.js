@@ -43,18 +43,14 @@ $(function() {
 	  			}
 	  		}
         });
-        $reset = function(){
-            
-        };
+        
         $('#nameBtn').click(
             function(){
                 $icon = $(this).find('i');
-                if($icon.hasClass('fa-ban')){
-                    $icon.removeClass('fa-ban');
-                }
-                if($(this).hasClass('btn-warning')){
-                    $(this).removeClass('btn-warning').addClass('btn-info');
-                }
+                
+                $(this).attr('class','btn btn-info');
+                $icon.attr('class','fa fa-comment');
+                
                 $icon.fadeOut().addClass('fa-spinner fa-spin').fadeIn();
                 var validator = $( "#contactForm" ).validate();
                 if(validator.element( "#name" )){
