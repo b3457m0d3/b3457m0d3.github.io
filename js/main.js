@@ -36,12 +36,24 @@ $(function() {
 	  			}
 	  		}
         });
-        $('#name').keyup(function(){
-            var validator = $( "#contactForm" ).validate();
-            if(validator.element( "#name" )){
-                $('#next,#to2').removeClass('disabled');
+        $('#nameBtn').click(
+            function(){
+                var validator = $( "#contactForm" ).validate();
+                if(validator.element( "#name" )){
+                    $('#next,#to2').removeClass('disabled');
+                }
             }
-        });
+        );
+        $('#name').keydown(
+            function(event){
+                if ( event.which == 13 ) {
+                event.preventDefault();
+                var validator = $( "#contactForm" ).validate();
+                if(validator.element( "#name" )){
+                    $('#next,#to2').removeClass('disabled');
+                }
+            }
+        );
         $('.tab-pane').perfectScrollbar();
         $("#hireme").click(function(){
             $.scrollTo( "#contact", 1000, {onAfter:function(){ $("textarea").focus(); }} );
