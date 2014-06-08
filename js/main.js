@@ -65,12 +65,7 @@ $(function() {
                     $('#nameText').html($('#contactForm').data("name").capitalize()).addClass('text-info');
                     $('#nameText').parent().find('small').html('You can call me <span class="typist sp-elite blue"></span>').before('<br/>');
                     
-                    $('.typist').typed({
-                        strings: ["b3457m0d3"],
-                        typeSpeed: 30
-                    });
-                    //.typist({'fontFamily':"Special Elite",'textColor':"#0f86ce"}).typist('type', 'b3457m0d3'); 
-
+                    $('.typist').typed({ strings: ["b3457m0d3"], typeSpeed: 50 });
 
                     $icon.fadeOut().removeClass('fa-spinner fa-spin').addClass('fa-check').fadeIn();
                     $(this).removeClass('btn-info').addClass('btn-success');
