@@ -61,7 +61,7 @@ $(function() {
                     $('#contactForm').data("name",$('#name').val());
                     
                     $('#nameText').html($('#contactForm').data("name").capitalize()).addClass('text-primary');
-                    $('#nameText').closest('small').html('');
+                    $('#nameText').parent().find('small').html('');
                     $icon.fadeOut().removeClass('fa-spinner fa-spin').addClass('fa-check').fadeIn();
                     $(this).removeClass('btn-info').addClass('btn-success');
                     
