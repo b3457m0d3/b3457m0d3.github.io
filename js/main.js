@@ -48,19 +48,23 @@ $(function() {
         };
         $('#nameBtn').click(
             function(){
-                $(this).find('i').fadeOut().toggleClass('fa-comment').addClass('fa-spinner fa-spin').show();
+                $icon = $(this).find('i');
+                if($icon.hasClass('fa-ban')){
+                    $(this).find('i').removeClass('fa-ban');
+                }
                 if($(this).hasClass('btn-warning')){
                     $(this).removeClass('btn-warning').addClass('btn-info');
-                } 
+                }
+                $icon.fadeOut().addClass('fa-spinner fa-spin').fadeIn();
                 var validator = $( "#contactForm" ).validate();
                 if(validator.element( "#name" )){
                     $('#next').removeClass('disabled');
                     $('#to2').fadeIn();
                     $('#contactForm').data("name",$('#name').val());
                     $(this).removeClass('btn-info').addClass('btn-success');
-                    $(this).find('i').fadeOut().removeClass('fa-spinner fa-spin').addClass('fa-check').fadeIn();
+                    $icon.fadeOut().removeClass('fa-spinner fa-spin').addClass('fa-check').fadeIn();
                 } else {
-                    $(this).find('i').fadeOut().removeClass('fa-spinner fa-spin').addClass('fa-ban').fadeIn();
+                    $icon.fadeOut().removeClass('fa-spinner fa-spin').addClass('fa-ban').fadeIn();
                     $(this).removeClass('btn-info').addClass('btn-warning');
                 }
             }
