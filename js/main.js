@@ -60,9 +60,9 @@ $(function() {
                     $('#to2').fadeIn();
                     $('#contactForm').data("name",$('#name').val());
                     
-                    $('#welcomeText').html('Hi').addClass('text-info');
+                    $('#welcomeText').html('Hi').addClass('text-primary');
                     $('#nameText').html($('#contactForm').data("name").capitalize()).addClass('text-info');
-                    $('#nameText').parent().find('small').html('How may I be of service?').before('<br/>');
+                    $('#nameText').parent().find('small').html('You can call me <span class="sp-elite blue">b3457m0d3</span>').before('<br/>');
                     $icon.fadeOut().removeClass('fa-spinner fa-spin').addClass('fa-check').fadeIn();
                     $(this).removeClass('btn-info').addClass('btn-success');
                     
