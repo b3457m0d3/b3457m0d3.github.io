@@ -47,7 +47,7 @@ $(function() {
 	  			}
 	  		}
         });
-        
+        $('#next').addClass('disabled');
         $('#nameBtn').click(
             function(){
                 $('#name').blur();
@@ -59,7 +59,6 @@ $(function() {
                 var validator = $( "#contactForm" ).validate();
                 if(validator.element( "#name" )){
                     $('#next').removeClass('disabled');
-                    $('#to2').fadeIn();
                     $('#contactForm').data("name",$('#name').val());
                     
                     $('#welcomeText').html('Hi').addClass('text-primary');
