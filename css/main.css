@@ -4,7 +4,7 @@
    Author's custom styles
    ========================================================================== */
 body {
-    padding-top: 50px;
+    padding-top: 30px;
     padding-bottom: 20px;
 }
 .sp-elite {font-family:"Special Elite",monospace;}
@@ -34,7 +34,7 @@ body {
     display:none;
 }
 
-.tab-pane {height:200px;}
+.tab-pane {height:250px;}
 textarea.expanding {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
