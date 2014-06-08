@@ -9,7 +9,18 @@ $(function() {
         return params;
     }
     $(document).ready(function() {
-  	$('#rootwizard').bootstrapWizard({'nextSelector': '.button-next', 'previousSelector': '.button-previous', 'firstSelector': '.button-first', 'lastSelector': '.button-last'});
+  	$('#rootwizard').bootstrapWizard({
+        'nextSelector': '.button-next',
+        'previousSelector': '.button-previous',
+        'firstSelector': '.button-first', 
+        'lastSelector': '.button-last',
+        onTabShow: function(tab, navigation, index) {
+            var $total = navigation.find('li').length;
+            var $current = index+1;
+            var $percent = ($current/$total) * 100;
+            $('#rootwizard').find('.bar').css({width:$percent+'%'});
+        }
+    });
         $('.tab-pane').perfectScrollbar();
         $("#hireme").click(function(){
             $.scrollTo( "#contact", 1000, {onAfter:function(){ $("textarea").focus(); }} );
