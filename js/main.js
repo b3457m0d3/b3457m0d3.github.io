@@ -13,7 +13,7 @@ $(function() {
     }
    
     $(document).on('insert.typist', function(e){
-        $('.typist').typist({fontFamily:"Special Elite",textColor:"#0f86ce"}).typist('type', 'b3457m0d3');  
+        $('.typist').typist({'fontFamily':"Special Elite",'textColor':"#0f86ce"}).typist('type', 'b3457m0d3');  
     });
     
     $(document).ready(function() {
