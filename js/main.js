@@ -11,10 +11,6 @@ $(function() {
         }
         return params;
     }
-   
-    $(document).on('insert.typist', function(e){
-        $('.typist').typist({'fontFamily':"Special Elite",'textColor':"#0f86ce"}).typist('type', 'b3457m0d3');  
-    });
     
     $(document).ready(function() {
         
@@ -70,9 +66,7 @@ $(function() {
                     $('#nameText').parent().find('small').html('You can call me <span class="typist" data-txt="b3457m0d3"></span>').before('<br/>');
                     
                     if ($(".typist")) {
-                        $.event.trigger({
-                            type: "insert.typist"
-                        });
+                        $('.typist').typist({'fontFamily':"Special Elite",'textColor':"#0f86ce"}).typist('type', 'b3457m0d3'); 
                     }
 
 
