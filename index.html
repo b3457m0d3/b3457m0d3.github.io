@@ -64,7 +64,7 @@
         
 <div style="display:block;height:70px;">&nbsp;</div>
 <div class="jumbotron">
-    <form id="contact" method="POST" action="////forms.brace.io/">
+    <form id="contactForm" method="POST" action="////forms.brace.io/">
         <div id="rootwizard">
             <div class="navbar">
                 <div class="navbar-inner">
@@ -86,6 +86,14 @@
             </div>
             <div class="tab-content">
                 <div class="tab-pane" id="tab1">
+                    <h2 class="open-sans-c">Welcome Friend. <small>What can I call you?</small></h2>
+                    <span class="input-group">
+                        <span class="input-group-addon"></span>
+                        <input type="text" class="form-control required" id="name" name="name">
+                    </span>
+                    
+                </div>
+                <div class="tab-pane" id="tab2">
                     <h2 class="open-sans-c">Extraordinary Work is done for Extra-Ordinary Clients</h2>
                     <p class="text-justify">
                         You <span class="text-info">demand</span> quality, you recognize that end-user experience contributes to brand loyalty and retention.<br/>
@@ -94,9 +102,7 @@
                         Utilizing the best technologies the web has to offer and leveraging them to your advantage.
                     </p>
                 </div>
-                <div class="tab-pane" id="tab2">
-                    <h2 class="open-sans-c"></h2>
-                </div>
+                
                 <div class="tab-pane" id="tab3">
                     3
                 </div>
@@ -128,15 +134,15 @@
                             </span>
                             <input class="form-control" type="text" id="_replyto" name="_replyto" placeholder="Your email" />
                         </span>
-                        <textarea placeholder="Message Body..." class='form-control expanding' id="message" name="message" rows="3"></textarea>
+                        <textarea placeholder="Message Body..." class='form-control expanding required' id="body" name="body" rows="3"></textarea>
 
                         <span class="input-group">
-                            <input class="form-control" type="email" id="_replyto" name="_replyto" placeholder="Your email" />
+                            <input class="form-control required email" type="email" id="email" name="email" placeholder="Your email" />
                             <small>
                                 <span id="charCount" class="open-sans-c pull-right"></span>
                             </small>
                             <span class="input-group-btn">
-                                <button class="btn btn-primary btn-lg" type="submit">Send</button>
+                                <button class="btn btn-primary btn-lg " type="submit">Send</button>
                             </span>
                         </span>
                     </div>

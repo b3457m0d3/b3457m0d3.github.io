@@ -10,22 +10,11 @@ $(function() {
     }
     $(document).ready(function() {
         
-        var $validator = $("#commentForm").validate({
+        var $validator = $("#contactForm").validate({
 		  rules: {
-		    emailfield: {
-		      required: true,
-		      email: true,
-		      minlength: 3
-		    },
-		    namefield: {
-		      required: true,
-		      minlength: 3
-		    },
-		    bodyfield: {
-		      required: true,
-		      minlength: 3,
-		      url: true
-		    }
+		    email: { required: true, email: true, minlength: 3 },
+		    name: { required: true,  minlength: 3 },
+		    body: { required: true, minlength: 3 }
 		  }
 		});
         $('#rootwizard').bootstrapWizard({
@@ -33,12 +22,19 @@ $(function() {
             'previousSelector': '.button-previous',
             'firstSelector': '.button-first', 
             'lastSelector': '.button-last',
-            onTabShow: function(tab, navigation, index) {
+            'onTabShow': function(tab, navigation, index) {
                 var $total = navigation.find('li').length;
                 var $current = index+1;
                 var $percent = ($current/$total) * 100;
                 $('#rootwizard').find('.progress-bar').css({width:$percent+'%'});
-            }
+            },
+            'onNext': function(tab, navigation, index) {
+	  			var $valid = $("#contactForm").valid();
+	  			if(!$valid) {
+	  				$validator.focusInvalid();
+	  				return false;
+	  			}
+	  		}
         });
         $('.tab-pane').perfectScrollbar();
         $("#hireme").click(function(){
