@@ -11,12 +11,23 @@ $(function() {
     $(document).ready(function() {
         
         var $validator = $("#contactForm").validate({
-		  rules: {
-		    email: { required: true, email: true, minlength: 3 },
-		    name: { required: true,  minlength: 3 },
-		    body: { required: true, minlength: 3 }
-		  }
+          ignore : ".ignore",
+          onkeyup: false,
+          focusCleanup: true,
+		  rules  : {
+		    email: { required: true, minlength: 3, email: true },
+		    name : { required: true, minlength: 3 },
+		    body : { required: true, minlength: 3 }
+		  },
+          /*groups: {
+            username: "fname lname"
+          },*/
+          tooltip_options: {
+            example4: {trigger:'focus'},
+            example5: {placement:'right',html:true}
+          }
 		});
+        
         $('#rootwizard').bootstrapWizard({
             'nextSelector': '.button-next',
             'previousSelector': '.button-previous',
@@ -38,9 +49,13 @@ $(function() {
         });
         $('#nameBtn').click(
             function(){
-                var validator = $( "#contactForm" ).validate();
+                $(this).find('i').fadeOut().removeClass('fa-comment').addClass('fa-spinner fa-spin').show();
+                var validator = $( "#contactForm" ).validate({ignore:".ignore"});
                 if(validator.element( "#name" )){
-                    $('#next,#to2').removeClass('disabled');
+                    $('#next').removeClass('disabled');
+                    $('#to2').fadeIn();
+                    $('#contactForm').data("name",$('#name').val());
+                    $(this).find('i').fadeOut().removeClass('fa-spinner fa-spin').addClass('fa-check').show();
                 }
             }
         );
@@ -48,9 +63,16 @@ $(function() {
             function(event){
                 if ( event.which == 13 ) {
                     event.preventDefault();
+                    $('#nameBtn').find('i').fadeOut().removeClass('fa-comment').addClass('fa-spinner fa-spin').show();
                     var validator = $( "#contactForm" ).validate();
                     if(validator.element( "#name" )){
-                        $('#next,#to2').removeClass('disabled');
+                        $('#next').removeClass('disabled');
+                        $('#to2').fadeIn();
+                        $('#contactForm').data("name",$('#name').val());
+                        $('#nameBtn').find('i').fadeOut().removeClass('fa-spinner fa-spin').addClass('fa-check').show();
+                    } else {
+                        $('#nameBtn').hasClass()
+                        $('#nameBtn').find('i').fadeOut().removeClass('fa-spinner fa-spin').addClass('fa-ban').show();
                     }
                 }
             }
