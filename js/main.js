@@ -43,9 +43,15 @@ $(function() {
 	  			}
 	  		}
         });
+        $reset = function(){
+            
+        };
         $('#nameBtn').click(
             function(){
                 $(this).find('i').fadeOut().toggleClass('fa-comment').addClass('fa-spinner fa-spin').show();
+                if($(this).hasClass('btn-warning')){
+                    $(this).removeClass('btn-warning').addClass('btn-info');
+                } 
                 var validator = $( "#contactForm" ).validate();
                 if(validator.element( "#name" )){
                     $('#next').removeClass('disabled');
@@ -71,7 +77,7 @@ $(function() {
                         $('#contactForm').data("name",$('#name').val());
                         $('#nameBtn').find('i').fadeOut().removeClass('fa-spinner fa-spin').addClass('fa-check').fadeIn();
                     } else {
-                        $('#nameBtn').hasClass()
+                        $('#nameBtn').hasClass();
                         $('#nameBtn').find('i').fadeOut().removeClass('fa-spinner fa-spin').addClass('fa-ban').fadeIn();
                     }
                 }
