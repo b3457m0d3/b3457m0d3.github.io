@@ -83,7 +83,6 @@ $(function() {
                 }
             }
         );
-        $('.tab-pane').perfectScrollbar();
         $("#hireme").click(function(){
             $.scrollTo( "#contact", 1000, {onAfter:function(){ $("textarea").focus(); }} );
         }); 
