@@ -60,13 +60,9 @@ $(function() {
                     $icon.fadeOut().removeClass('fa-spinner fa-spin').addClass('fa-check').fadeIn();
                     $(this).removeClass('btn-info').addClass('btn-success');
                     
-                    $('#nameGroup').animate({
-                        width: [ "toggle", "swing" ],
-                        opacity: "toggle"
-                      }, 5000, "linear", function() {
-                        alert( "Animation complete." );
-                      });
-                    };
+                    $('#nameGroup').animate({ width: [ 0, "swing" ], opacity: 0 }, 5000, "linear", 
+                        function(){ alert( "Animation complete." ); 
+                    });
                     
                 } else {
                     $icon.fadeOut().removeClass('fa-spinner fa-spin').addClass('fa-ban').fadeIn();
