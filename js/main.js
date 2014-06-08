@@ -69,10 +69,10 @@ $(function() {
                         $('#next').removeClass('disabled');
                         $('#to2').fadeIn();
                         $('#contactForm').data("name",$('#name').val());
-                        $('#nameBtn').find('i').fadeOut().removeClass('fa-spinner fa-spin').addClass('fa-check').show();
+                        $('#nameBtn').find('i').fadeOut().removeClass('fa-spinner fa-spin').addClass('fa-check').fadeIn();
                     } else {
                         $('#nameBtn').hasClass()
-                        $('#nameBtn').find('i').fadeOut().removeClass('fa-spinner fa-spin').addClass('fa-ban').show();
+                        $('#nameBtn').find('i').fadeOut().removeClass('fa-spinner fa-spin').addClass('fa-ban').fadeIn();
                     }
                 }
             }
