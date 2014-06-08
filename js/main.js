@@ -76,9 +76,6 @@ $(function() {
                     }
 
 
-                    if (insertTypistEvent.result !== false) {
-                      alert('typist added!');
-                    }
                     $icon.fadeOut().removeClass('fa-spinner fa-spin').addClass('fa-check').fadeIn();
                     $(this).removeClass('btn-info').addClass('btn-success');
                     
