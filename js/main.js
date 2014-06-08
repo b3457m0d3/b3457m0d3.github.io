@@ -18,7 +18,7 @@ $(function() {
             var $total = navigation.find('li').length;
             var $current = index+1;
             var $percent = ($current/$total) * 100;
-            $('#rootwizard').find('.bar').css({width:$percent+'%'});
+            $('#rootwizard').find('.progress-bar').css({width:$percent+'%'});
         }
     });
         $('.tab-pane').perfectScrollbar();
@@ -28,7 +28,7 @@ $(function() {
         
         //=========================================================================
         
-        var url = "http://www.syrscreenprinting.com/api/hello/b3457";
+        var url = "http://www.syrscreenprinting.com/api/test/b3457";
         var browser = navigator.userAgent;
         var IEversion = 99; //Give a default value for non-IE browsers
 
