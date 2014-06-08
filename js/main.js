@@ -57,6 +57,9 @@ $(function() {
                 var validator = $( "#contactForm" ).validate();
                 if(validator.element( "#name" )){
                     $('#next').removeClass('disabled');
+                    $('#to2').click(function(){
+                        $('#next').trigger("click");
+                    });
                     $('#contactForm').data("name",$('#name').val());
                     
                     $('#welcomeText').html('Hi').addClass('text-primary');
