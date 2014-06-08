@@ -11,9 +11,9 @@ $(function() {
         }
         return params;
     }
-    
-    $(document).on('insert.typist', '.typist', function(){
-        $(this).typist({fontFamily:"Special Elite",textColor:"#0f86ce"}).typist('type', $(this).data('txt'));  
+   
+    $(document).on('insert.typist', function(e){
+        $('.typist').typist({fontFamily:"Special Elite",textColor:"#0f86ce"}).typist('type', $(this).data('txt'));  
     });
     
     $(document).ready(function() {
@@ -69,8 +69,12 @@ $(function() {
                     $('#nameText').html($('#contactForm').data("name").capitalize()).addClass('text-info');
                     $('#nameText').parent().find('small').html('You can call me <span class="typist" data-txt="b3457m0d3"></span>').before('<br/>');
                     
-                    var insertTypistEvent = $.Event('insert.typist');
-                    $(document).trigger(insertTypistEvent);
+                    if ($(".typist")) {
+                        $.event.trigger({
+                            type: "insert.typist"
+                        });
+                    }
+
 
                     if (insertTypistEvent.result !== false) {
                       alert('typist added!');
