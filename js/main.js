@@ -50,7 +50,7 @@ $(function() {
             function(){
                 $icon = $(this).find('i');
                 if($icon.hasClass('fa-ban')){
-                    $(this).find('i').removeClass('fa-ban');
+                    $icon.removeClass('fa-ban');
                 }
                 if($(this).hasClass('btn-warning')){
                     $(this).removeClass('btn-warning').addClass('btn-info');
