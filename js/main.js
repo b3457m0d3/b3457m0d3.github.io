@@ -31,8 +31,6 @@ $(function() {
         $('#rootwizard').bootstrapWizard({
             'nextSelector': '.button-next',
             'previousSelector': '.button-previous',
-            'firstSelector': '.button-first', 
-            'lastSelector': '.button-last',
             'onTabShow': function(tab, navigation, index) {
                 var $total = navigation.find('li').length;
                 var $current = index+1;
