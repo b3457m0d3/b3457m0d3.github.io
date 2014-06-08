@@ -60,7 +60,7 @@ $(function() {
                     $('#to2').fadeIn();
                     $('#contactForm').data("name",$('#name').val());
                     
-                    $('$nameText').html($('#contactForm').data("name").capitalize()).addClass('text-primary');
+                    $('#nameText').html($('#contactForm').data("name").capitalize()).addClass('text-primary');
                     $icon.fadeOut().removeClass('fa-spinner fa-spin').addClass('fa-check').fadeIn();
                     $(this).removeClass('btn-info').addClass('btn-success');
                     
