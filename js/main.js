@@ -11,6 +11,11 @@ $(function() {
         }
         return params;
     }
+    
+    $(document).on('insert.typist', '.typist', function(){
+        $(this).typist({fontFamily:"Special Elite",textColor:"#0f86ce"}).typist('type', $(this).data('txt'));  
+    });
+    
     $(document).ready(function() {
         
         var $validator = $("#contactForm").validate({
@@ -62,10 +67,12 @@ $(function() {
                     
                     $('#welcomeText').html('Hi').addClass('text-primary');
                     $('#nameText').html($('#contactForm').data("name").capitalize()).addClass('text-info');
-                    $('#nameText').parent().find('small').html('You can call me <span id="typist" class="sp-elite blue" data-txt="b3457m0d3"></span>').before('<br/>');
-                    if($('#typist')){
-                        alert('its there');
-                        $('#typist').typist({fontFamily:"Special Elite",textColor:"#0f86ce"}).typist('type', $(this).data('txt'));
+                    $('#nameText').parent().find('small').html('You can call me <span class="typist" data-txt="b3457m0d3"></span>').before('<br/>');
+                    var beforeShowEvent = $.Event('beforeshow.tab');
+                    $tab.trigger(beforeShowEvent);
+
+                    if (beforeShowEvent.result !== false) {
+                      // show the tab
                     }
                     $icon.fadeOut().removeClass('fa-spinner fa-spin').addClass('fa-check').fadeIn();
                     $(this).removeClass('btn-info').addClass('btn-success');
