@@ -47,10 +47,11 @@ $(function() {
         $('#name').keydown(
             function(event){
                 if ( event.which == 13 ) {
-                event.preventDefault();
-                var validator = $( "#contactForm" ).validate();
-                if(validator.element( "#name" )){
-                    $('#next,#to2').removeClass('disabled');
+                    event.preventDefault();
+                    var validator = $( "#contactForm" ).validate();
+                    if(validator.element( "#name" )){
+                        $('#next,#to2').removeClass('disabled');
+                    }
                 }
             }
         );
