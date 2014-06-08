@@ -18,7 +18,7 @@ $(function() {
 		    body : { required: true, minlength: 3 }
 		  },
           tooltip_options: {
-            name: {placement:'top',trigger:'manual'},
+            name: {trigger:'manual'},
             email: {placement:'right',html:true},
             body: {placement:'right',html:true}
           }
