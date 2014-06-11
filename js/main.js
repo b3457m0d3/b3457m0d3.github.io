@@ -57,9 +57,6 @@ $(function() {
                 var validator = $( "#contactForm" ).validate();
                 if(validator.element( "#name" )){
                     $('#next').removeClass('disabled');
-                    $('#to2').click(function(){
-                        $('#next').trigger("click");
-                    });
                     $('#contactForm').data("name",$('#name').val());
                     
                     $('#welcomeText').html('Hi').addClass('text-primary');
@@ -74,7 +71,11 @@ $(function() {
                     
                     $('#nameGroup').animate({ width: [ 0, "swing" ], opacity: 0 }, 3500, "linear",function(){ $('#intro').fadeIn('slow').removeClass('hide'); });
                     
-                    $('#rightPanel').removeClass('hide').animate({ width: [ 350, "swing" ] }, 2000, "linear", function(){ $('#to2').fadeIn("slow").removeClass('hide'); });
+                    $('#rightPanel').removeClass('hide')
+                                    .animate({ width: [ 350, "swing" ] }, 2000, "linear", 
+                                        function(){ 
+                                            $('#to2').fadeIn("slow").removeClass('hide').click( function(){ $('#next').trigger("click");}; 
+                                        });
                     
                     
                 } else {
