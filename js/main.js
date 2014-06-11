@@ -69,13 +69,32 @@ $(function() {
                     $(this).removeClass('btn-info').addClass('btn-success');
                     
                     
-                    $('#nameGroup').animate({ width: [ 0, "swing" ], opacity: 0 }, 3500, "linear",function(){ $('#intro').fadeIn('slow').removeClass('hide'); });
+                    $('#nameGroup')
+                        .animate(
+                            { width: [ 0, "swing" ], 
+                            opacity: 0 }, 
+                            3500, 
+                            "linear",
+                            function(){ 
+                                $('#intro').fadeIn('slow').removeClass('hide'); 
+                            }
+                        );
                     
-                    $('#rightPanel').removeClass('hide')
-                                    .animate({ width: [ 350, "swing" ] }, 2000, "linear", 
+                    $('#rightPanel')
+                        .removeClass('hide')
+                        .animate(
+                            { width: [ 350, "swing" ] }, 
+                            2000, 
+                            "linear", 
+                            function(){ 
+                                $('#to2').fadeIn("slow").removeClass('hide')
+                                    .click( 
                                         function(){ 
-                                            $('#to2').fadeIn("slow").removeClass('hide').click( function(){ $('#next').trigger("click");}; 
-                                        });
+                                            $('#next').trigger("click"); 
+                                        } 
+                                    )
+                            }
+                        );
                     
                     
                 } else {
