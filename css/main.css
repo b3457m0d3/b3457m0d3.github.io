@@ -34,7 +34,7 @@ body {
     display:none;
 }
 
-.tab-pane {height:250px;overflow: hidden;background:transparent;}
+.tab-pane {height:250px;overflow: hidden;background:url('img/blueprints.png') no-repeat bottom left;}
 textarea.expanding {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
