@@ -74,7 +74,7 @@ $(function() {
                     
                     $('#nameGroup').animate({ width: [ 0, "swing" ], opacity: 0 }, 3500, "linear",function(){ $('#intro').fadeIn('slow').removeClass('hide'); });
                     
-                    $('#rightPanel').animate({ width: [ 350, "swing" ], opacity: 1 }, 2000, "linear", function(){ $('#to2').fadeIn("slow").removeClass('hide'); });
+                    $('#rightPanel').removeClass('hide').animate({ width: [ 350, "swing" ] }, 2000, "linear", function(){ $('#to2').fadeIn("slow").removeClass('hide'); });
                     
                     
                 } else {
